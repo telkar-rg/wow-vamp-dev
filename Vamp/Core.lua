@@ -617,9 +617,10 @@ function Vamp:OnEnable()
 	self:RegisterEvent("GUILD_ROSTER_UPDATE", "OnEvent")
 	self:RegisterEvent("RAID_ROSTER_UPDATE", "OnEvent")
 	self:RegisterEvent("PLAYER_REGEN_DISABLED", "OnEvent")
+	self:RegisterEvent("CHAT_MSG_MONSTER_YELL", "OnEvent")
 
 	self:UnregisterAllComm()
- self:RegisterComm(commPrefix, "OnCommReceived")
+	self:RegisterComm(commPrefix, "OnCommReceived")
 
 	GuildRoster()
 	self:UpdateRaid()
@@ -687,12 +688,20 @@ function Vamp:EndFight()
 end
 
 
+function Vamp:CheckMonsterYell(chatMsg, chatAuthor)
+	if chatMsg and chatAuthor and chatMsg == L["YELL_AGGRO"] and chatAuthor == L["Blood-Queen Lana'thel"] then
+		mod:StartFight()
+	end
+end
+
+
 do -- Pull detection
 	local t = { "target", "targettarget", "focus", "focustarget", "mouseover", "mouseovertarget" }
 	for i = 1, 4 do t[#t+1] = format("party%dtarget", i) end
 	for i = 1, 40 do t[#t+1] = format("raid%dtarget", i) end
 	
 	local function doCheckForPull(id, num)
+		
 		for _, unit in pairs(t) do
 			if UnitExists(unit) and not UnitIsPlayer(unit) and tonumber(UnitGUID(unit):sub(-12, -7), 16) == id then
 				if UnitAffectingCombat(unit) then
@@ -707,7 +716,15 @@ do -- Pull detection
 	end
 
 	function mod:CheckForPull()
-		if UnitInRaid("player") then for _, id in pairs(pullNPCs) do if doCheckForPull(id, 0) then return end end end
+		if UnitInRaid("player") then 
+			if mod.inCombat then return end
+			
+			for _, id in pairs(pullNPCs) do 
+				if doCheckForPull(id, 0) then 
+					return 
+				end 
+			end 
+		end
 	end
 end
 
@@ -787,7 +804,9 @@ function Vamp:OnEvent(event, ...)
 		self:UpdateRaid()
 	elseif event == "PLAYER_REGEN_DISABLED" and isEnabled then
 		self:CheckForPull()			
- end
+	elseif event == "CHAT_MSG_MONSTER_YELL" and isEnabled then 	-- ... = chatMsg, chatAuthor
+		self:CheckMonsterYell(...)
+	end
 end
 
 
