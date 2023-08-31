@@ -1,6 +1,9 @@
 local L
 L = LibStub("AceLocale-3.0"):NewLocale("Vamp", "enUS", true)
 
+L["YELL_AGGRO"] = 'You have made an... unwise... decision.' 	-- 38048
+L["Blood-Queen Lana'thel"] = true
+
 L["Options"] = true
 L["Enable Vamp"] = true
 L["Tanks"] = true
@@ -96,6 +99,10 @@ L["%d player(s) are running VampArrow. %d player(s) are not."] = true
 
 L = LibStub("AceLocale-3.0"):NewLocale("Vamp", "deDE")
 if L then
+
+L["YELL_AGGRO"] = 'Ihr habt... unklug... gewählt.' 	-- 38048
+L["Blood-Queen Lana'thel"] = 'Blutkönigin Lana\'thel'
+
 L["Are you sure you want to clear all player lists?"] = "Bist du sicher, dass du alle Spieler von der Liste entfernen willst?"
 L["Arrow"] = "Pfeil"
 L["Assignment delay"] = "Zuordnungsverzögerung"
@@ -195,6 +202,10 @@ end
 
 L = LibStub("AceLocale-3.0"):NewLocale("Vamp", "esES")
 if L then
+
+L["YELL_AGGRO"] = 'Habéis tomado una... decisión... incorrecta.' 	-- 38048
+L["Blood-Queen Lana'thel"] = 'Reina de Sangre Lana\'thel'
+
 L["Are you sure you want to clear all player lists?"] = "¿Seguro que quieres borrar todas las listas de jugadores?"
 L["Arrow"] = true
 L["Assignment delay"] = "Retardo en la asignación"
@@ -290,6 +301,10 @@ end
 
 L = LibStub("AceLocale-3.0"):NewLocale("Vamp", "esMX")
 if L then
+
+L["YELL_AGGRO"] = 'Han tomado una... decisión... necia.' 	-- 38048
+L["Blood-Queen Lana'thel"] = 'Reina de Sangre Lana\'thel'
+
 -- L["Are you sure you want to clear all player lists?"] = ""
 -- L["Arrow"] = ""
 -- L["Assignment delay"] = ""
@@ -383,6 +398,10 @@ end
 
 L = LibStub("AceLocale-3.0"):NewLocale("Vamp", "frFR")
 if L then
+
+L["YELL_AGGRO"] = 'Ce n\'est pas une décision… très sage.' 	-- 38048
+L["Blood-Queen Lana'thel"] = 'Reine de sang Lana\'thel'
+
 -- L["Are you sure you want to clear all player lists?"] = ""
 L["Arrow"] = "Flèche"
 L["Assignment delay"] = "Retard d'affectation"
@@ -482,6 +501,10 @@ end
 
 L = LibStub("AceLocale-3.0"):NewLocale("Vamp", "koKR")
 if L then
+
+L["YELL_AGGRO"] = '정말... 현명하지 못한... 결정을 했군.' 	-- 38048
+L["Blood-Queen Lana'thel"] = '피의 여왕 라나텔'
+
 L["Are you sure you want to clear all player lists?"] = "모든 플레이어 리스트를 초기화 하겠습니까?"
 L["Arrow"] = "화살표"
 L["Assignment delay"] = "지정 딜레이"
@@ -581,6 +604,10 @@ end
 
 L = LibStub("AceLocale-3.0"):NewLocale("Vamp", "ruRU")
 if L then
+
+L["YELL_AGGRO"] = 'Это было... неразумное... решение.' 	-- 38048
+L["Blood-Queen Lana'thel"] = 'Кровавая королева Лана\'тель'
+
 L["Are you sure you want to clear all player lists?"] = "Вы уверены что хотите очистить все списки игроков?"
 L["Arrow"] = "Стрелка"
 L["Assignment delay"] = "Задержка назначений"
@@ -680,6 +707,10 @@ end
 
 L = LibStub("AceLocale-3.0"):NewLocale("Vamp", "zhCN")
 if L then
+
+L["YELL_AGGRO"] = '你做了一个……愚蠢的……决定。' 	-- 38048
+L["Blood-Queen Lana'thel"] = '鲜血女王兰娜瑟尔'
+
 -- L["Are you sure you want to clear all player lists?"] = ""
 -- L["Arrow"] = ""
 L["Assignment delay"] = "分配延时"
@@ -775,6 +806,10 @@ end
 
 L = LibStub("AceLocale-3.0"):NewLocale("Vamp", "zhTW")
 if L then
+
+L["YELL_AGGRO"] = '你做了一個...不明智的...選擇。' 	-- 38048
+L["Blood-Queen Lana'thel"] = '血腥女王菈娜薩爾'
+
 L["Are you sure you want to clear all player lists?"] = "確認清除所有玩家排序列表"
 L["Arrow"] = "箭頭指標"
 L["Assignment delay"] = "指派延遲"
