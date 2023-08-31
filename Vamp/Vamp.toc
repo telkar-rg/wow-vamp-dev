@@ -1,0 +1,24 @@
+## Author: Allara
+## Interface: 30300
+## Notes: Automates bites during the Blood-Queen Lana'thel encounter in Icecrown Citadel
+## Title: Vamp
+## Version: 1.0
+## SavedVariables: VampDB
+## OptionalDeps: Ace3
+## X-Embeds: Ace3
+## X-Category: Boss Encounters
+## LoadManagers: AddonLoader
+## X-LoadOn-Slash: /vamp
+## X-LoadOn-Zone: The Sanctum of Blood
+## X-LoadOn-InterfaceOptions: Vamp
+## X-Curse-Packaged-Version: r103-release
+## X-Curse-Project-Name: Vamp
+## X-Curse-Project-ID: vamp
+## X-Curse-Repository-ID: wow/vamp/mainline
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+Locales.lua
+Core.lua

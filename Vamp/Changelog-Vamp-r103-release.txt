@@ -1,0 +1,33 @@
+------------------------------------------------------------------------
+r105 | allara | 2010-07-01 03:32:05 +0000 (Thu, 01 Jul 2010) | 1 line
+Changed paths:
+   A /tags/r103-release (from /trunk:104)
+
+Tagging as r103-release
+------------------------------------------------------------------------
+r103 | allara | 2010-06-24 15:19:44 +0000 (Thu, 24 Jun 2010) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/Vamp.toc
+
+- Fix AddonLoader zone name
+------------------------------------------------------------------------
+r101 | allara | 2010-06-23 23:32:45 +0000 (Wed, 23 Jun 2010) | 2 lines
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/Core.lua
+   D /trunk/Locales
+   A /trunk/Locales.lua
+   D /trunk/Options_Defaults.lua
+   M /trunk/Vamp.toc
+   M /trunk/embeds.xml
+
+- Proper pull/wipe/defeat detection and performance optimizations
+- Improved AddonLoader support
+------------------------------------------------------------------------
+r99 | allara | 2010-06-03 17:05:27 +0000 (Thu, 03 Jun 2010) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+
+- [Ticket 22] Remove reserved slash command /v
+------------------------------------------------------------------------
